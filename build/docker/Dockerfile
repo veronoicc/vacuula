@@ -48,8 +48,11 @@ FROM python:3.14-slim
 WORKDIR /server
 
 # tools
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl openssl \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    ca-certificates \
+    build-essential \
+    python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/server/.venv/bin:$PATH" PYTHONUNBUFFERED=1
