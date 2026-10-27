@@ -132,6 +132,7 @@ jobs:
           gh release create "v$VERSION" \
             build/docker/docker-compose.yaml \
             --target "$GITHUB_SHA" \
+            
             --title "v$VERSION" \
             --notes "Docker image: \`$IMAGE:$VERSION\`" \
             $flag
