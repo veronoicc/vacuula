@@ -103,7 +103,7 @@ jobs:
           context: .
           file: build/docker/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
           # TODO: right now we support only X.X.X[-bX], in the future we might want to support more complex
           # idea: for anything else versions have to match exactly? but whatever we do, update both version
           # parsing in both FE, BE and build script!
