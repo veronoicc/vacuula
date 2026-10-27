@@ -16,7 +16,9 @@ RUN pnpm vite build
 
 FROM python:3.14-slim AS python-build
 
-COPY --from=ghcr.io/astral-sh/uv:0.12 /uv /uvx /bin/
+ADD https://astral.sh/uv/install.sh /uv-installer.sh
+RUN sh /uv-installer.sh && rm /uv-installer.sh
+ENV PATH="/root/.local/bin:${PATH}"
 
 WORKDIR /server
 
