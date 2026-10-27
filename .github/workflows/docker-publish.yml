@@ -135,3 +135,4 @@ jobs:
             --title "v$VERSION" \
             --notes "Docker image: \`$IMAGE:$VERSION\`" \
             $flag
+
